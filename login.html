@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #loginContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:aqua;
+            border: 2px solid darkgrey;
+            border-radius: 5px;
+
+            height: 150px;
+            width: 200px;
+
+            margin: 10px;
+            padding:3px;
+            
+            box-shadow: 5px 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginContainer">
+        <form action="login.php.html" method="post">
+            Username: <input type="text" name="username"><br/>
+            Password: <input type="password" name="passcode"><br/>
+            <input type="submit" value="login">
+        </form>
+    </div>
+</body>
+</html>
