@@ -1,0 +1,40 @@
+#first{
+    border-color:red;
+    border-style: solid;
+    border-width: 3px;
+}
+#second{
+    border-color:green;
+    border-style: solid;
+    border-width: 3px;
+}
+#third{
+    border-color:blue;
+    border-style: solid;
+    border-width: 3px;
+}
+body, html{
+    height: 100%;
+    background-color: black;
+}
+h1, h2, h3, h4, h5, h6, a,p, span{
+    color:lightgray;
+}
+ul.navbar-nav {
+    flex-direction: column;
+}
+nav.navbar {
+    padding-left:0px;
+}
+.my-navbar-brand{
+    white-space: normal;
+}
+.my-email-content{
+    padding:0px 4px;
+}
+.my-email-content:nth-of-type(odd){
+    background-color: #353535;
+}
+.my-email-content:nth-of-type(even){
+    background-color: #141414;
+}

@@ -1,0 +1,34 @@
+.my-col{
+    border-color:red;
+    border-width: 3px;
+}
+.my-row{
+    border-color:green;
+    border-width: 3px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; 
+    font-family: sans-serif;
+}
+.content { 
+    padding: 15px; 
+    box-sizing: border-box;
+    text-align: center;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    color:#000000; 
+    background: #00ccff;
+    font-size:1.5em;
+    text-align: left;
+    line-height:100px;
+}
