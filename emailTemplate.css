@@ -1,24 +1,36 @@
 #first{
-    border-color:red;
-    border-style: solid;
-    border-width: 3px;
+    -border-color:red;
+    -border-style: solid;
+    -border-width: 3px;
+    background:rgba(0,0,0,1);
 }
 #second{
-    border-color:green;
-    border-style: solid;
-    border-width: 3px;
+    -border-color:green;
+    -border-style: solid;
+    -border-width: 3px;
+    background:rgba(70, 50, 28,1);
 }
 #third{
-    border-color:blue;
-    border-style: solid;
-    border-width: 3px;
+    -border-color:blue;
+    -border-style: solid;
+    -border-width: 3px;
+    background:rgba(97, 97, 97, 1);
+    color: black!important;
+    display: flex;
+    
 }
 body, html{
     height: 100%;
-    background-color: black;
+    background-color: #0e0e0e;
 }
-h1, h2, h3, h4, h5, h6, a,p, span{
+h1, h2, h3, h4, h5, h6, a, p, span{
     color:lightgray;
+}
+#own-email{
+    color:lightgray;
+}
+h4{
+    display: inline-block;
 }
 ul.navbar-nav {
     flex-direction: column;
@@ -31,10 +43,30 @@ nav.navbar {
 }
 .my-email-content{
     padding:0px 4px;
+    margin: 0px -6px -6px -6px;
 }
 .my-email-content:nth-of-type(odd){
     background-color: #353535;
 }
 .my-email-content:nth-of-type(even){
-    background-color: #141414;
+    background-color: #00002b;
+}
+.scrollable{
+    overflow:scroll;
+    padding: 4px 0px;
+    flex-grow: 1;
+    -flex-shrink:1;
+    -height: 53vh;
+    max-height: 53vh;
+}
+.reply{
+    height: 33vh;
+    margin: 4px 0px;
+    border-radius: 0.5rem;
+    background-color: rgb(122, 122, 122);
+}
+#reply-btn{
+    flex-grow: 0;
+    flex-shrink:0;
+    margin: .5rem 0px;
 }
