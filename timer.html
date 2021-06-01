@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body {
+            background-color: blue;
+            display: flex;
+            justify-content:baseline;
+            flex-direction: column-reverse;
+            height: 100vh;
+        }
+        #demo{
+            color: white;
+        }
+    </style>
+
+    <!-- <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2022 15:37:26").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script> -->
+</head>
+<body>
+    <p id="demo"></p>
+    <form id="updateTimer" action="#">
+        <input type="text" value="5:00" required></textarea>
+        <button id="submit" onclick="updateTimer()">Update</button>
+    </form>
+
+</body>
+<footer>
+    <script>
+        let form = document.getElementById("updateTimer");
+        let waitLength = 5*60*1000;
+        let interval;
+        function updateTimer(){
+            let newDuration = form.elements[0];
+            try {
+                newDuration = newDuration.value.split(":");
+                for(let i = 0; i < newDuration.length; i++){
+                    newDuration[i] = parseInt(newDuration[i]);
+                }
+                if(newDuration.length === 1){
+                    waitLength = newDuration[0]*1000;
+                }else if(newDuration.length === 2){
+                    waitLength = (newDuration[0]*60 + newDuration[1])*1000;
+                }else if(newDuration.length === 3){
+                    waitLength = ((newDuration[0]*60 + newDuration[1])*60 + newDuration[2]) * 1000;
+                }else {
+                    form.elements[0].value = "5:00";
+                    let waitLength = 5*60*1000;
+                }
+                doTimer();
+
+            } catch (error) {
+                console.log(error);
+                form.elements[0].value = "5:00";
+            }
+            console.log("complete");
+            event.preventDefault();
+        }
+        function doTimer(){
+            if(interval != undefined)
+                clearInterval(interval);
+                document.body.style.backgroundColor = "black";
+            setTimeout(function(){
+                document.body.style.backgroundColor = "blue";
+            }, 1000);
+            interval = setInterval(function(){
+                document.body.style.backgroundColor = "red";
+                setTimeout(function(){
+                    document.body.style.backgroundColor = "blue";
+                }, 1000);
+            }, waitLength);
+        }
+        doTimer();
+        /*var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = waitTo - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);*/
+
+    </script>
+</footer>
+</html>

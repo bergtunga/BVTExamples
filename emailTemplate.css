@@ -20,7 +20,6 @@
     
 }
 body, html{
-    height: 100%;
     background-color: #0e0e0e;
 }
 h1, h2, h3, h4, h5, h6, a, p, span{
@@ -52,7 +51,7 @@ nav.navbar {
     background-color: #00002b;
 }
 .scrollable{
-    overflow:scroll;
+    overflow-y:scroll;
     padding: 4px 0px;
     flex-grow: 1;
     -flex-shrink:1;
