@@ -10,18 +10,18 @@
     <style>
         #header{
             display: flex;
-            position: fixed;
             max-height: 70px;
+            padding: 10px;
         }
         #header-img{
-            max-width: 50;
+            max-width: 50px;
             max-height:50px;
         }
         #nav-bar{
 
         }
         #form{
-
+            text-align: center;
         }
         #email{
 
@@ -29,31 +29,155 @@
         #submit{
 
         }
-        /*iframe{
-            overflow: hidden;
-        } */
+        .centered{
+            text-align: center;
+        }
         #content {
             display: flex;
+        }
+        #name{
+            font-style: italic;
+        }
+        h2{
+            font-weight: bold;
+            font-style: italic;
+        }
+        #talk{
+            background-color: rgb(207, 255, 200);
+            border-radius: 4px;
+            margin: 20px;
+        }
+        .buy_option{
+            padding: 40px 20px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        body{
+            background-color: #ddd;
+        }
+        .head-row{
+            opacity: 1;
+            border-radius: 3px;
+        }
+        .my-order{
+            margin-top: 10px;
+        }
+        .copyleft {
+            display:inline-block;
+            transform: rotate(180deg);
+        }
+        .my-foot{
+            margin-bottom: 30px;
+            color:white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .dark-link{
+            color:aqua;
         }
     </style>
 </head>
 <body>
-    <header id="header">
-        <div>
-        <img id="header-img" src="OkayGuysq.jpg"/> <!-- TODO-->
-        <nav id="nav-bar"></nav> <!-- TODO, Stick to top-->
-        <!-- TODO: 3 links to section of page -->
+    <div class="container my-container">
+        <div class="row sticky-top head-row bg-light">
+            <div class="col-6">
+            <header id="header">
+                    <img id="header-img" src="OkayGuysq.jpg"/>
+                    <h1 id="name">Master Ba... Lurers </h1>
+            </header>
+            </div>
+            <div class="col-6 align-self-end">
+                <nav id="nav-bar">
+                        <ul>
+                        <li><a href="#demo_video">See product demo!</a></li>
+                        <li><a href="#buzz">See why our product is better!</a></li>
+                        <li><a href="#talk">See what others are saying!</a></li>
+                        </ul>
+                    </nav>
+            </div>
+
         </div>
-    </header> <!-- TODO-->
-    <div id="content">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xfr64zoBTAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
-        
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <input id="email" type="text" value="Email Address" required/>
-            <input id="submit" type="button" value="Submit">
-            <!-- TODO Sign up for newsletter-->
-            <!-- TODO HTML5 val-->
-        </form>
+        <br/>
+        <!--Buzzwords-->
+        <div class ="row" id="buzz">
+            <div class="column">
+                <h2>Simply better</h2>
+                <h4>Machine Learning</h4>
+                <p>Using <em>Machine learning</em> we can do things with memes that others cannot!<br>...<br>...<br>...</p>
+                <!--linebreaks for sample text-->
+                <h4>Synergy</h4>
+                <p>Our product will <em>synergize</em> with your workflow, providing an excellent <em>force multiplier</em> to any and all workflows<br>...<br>...<br>...</p>
+                <h4>Work Hard, Play hard</h4>
+                <p><em>Overworked</em> and underpaid, but highly critical and highly valued workers <em>drink</em> to deal with the stress of working here!<br>...<br>...<br>...</p>
+            </div>
+        </div>
+        <div class ="row">
+            <div class="column">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 centered">
+                <h4>Watch our video to see why you should choose Master Lurers to make your meme!</h4>
+                <iframe id="demo_video" width="560" height="315"
+                src="https://www.youtube.com/embed/xfr64zoBTAQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    Sign up for our free newsletter! <br/>
+                    <input id="email" type="text" value="Email Address" required/><br/>
+                    <button id="submit" type="submit" value="Submit">Submit</button>
+                    <!-- TODO Sign up for newsletter-->
+                    <!-- TODO HTML5 val-->
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="talk">
+                <h4>See what others are saying about our memes!</h4>
+                <p>Good news Everyone! - Dr. Farnsworth</p>
+                <p><del>I don't know,</del> I just like it - Philip J. Fry</p>
+                <p>If we hit that bullseye, the rest of the dominoes will fall like a house of cards. - Zapp Brannigan </p>
+                <p>*groan* - Kiff Kroker</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Order Now!</h3>
+                For the low, low price of <a href="https://www.youtube.com/watch?v=l91ISfcuzDw">[redacted]</a> we'll make your meme!
+                <a href="#"></a>Choose a package below to order now!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-3 buy_option card">
+                <h4>Big Data</h4>
+                Using invasive, expensive, and robust data-mining, we provide an excellent value-add to any propisition you come up with!
+                <a class="btn btn-primary my-order" role="button" href="#">Choose <em>Big Data</em></button></a>
+            </div>
+            <div class="col-3 buy_option card">
+                <h4>Content is King</h4>
+                We derive our content from free-range developers in order to optimize the customer lifecycle and customer retention using personalized results!
+                <a class="btn btn-primary my-order" role="button" href="#">Choose <em>Content is King</em></button></a>
+            </div>
+            <div class="col-3 buy_option card">
+                <h4>FOMO</h4>
+                Playing off insecurity is what seperates good from great! Optimizing the customer journey by taking advantage of FOMO by ordering this industry disruptive package!
+                <a class="btn btn-primary my-order" role="button" href="#">Choose <em>FOMO</em></button></a>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 my-foot bg-dark centered">
+                <a class="dark-link" href="#">Now Hiring!</a> All payouts are made in experience and exposure.<br/>
+                <span class="copyleft">&copy;</span> 2021 MasterLurers Inc. - Not actually Incorporated.
+            </div>
+        </div>
     </div>
 </body>
 </html>
