@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .cell{
+            min-width: 10px;
+            width: 10px;
+            max-width: 10px;
+
+            min-height:10px;
+            height: 10px;
+            max-height: 10px;
+
+            padding:0;
+            border-radius: 0;
+
+            border: 1px solid darkgray;
+            display: inline;
+        }
+        .cell:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        .cell-lock-dead{
+            background-color:darkorange;
+        }
+        .cell-lock-alive{
+            background-color:rgb(119, 32, 0);
+        }
+        .cell-dead{
+            background-color:beige;
+        }
+        .cell-alive{
+            background-color:gray;
+        }
+        .properties{
+            width: 20rem;
+        }
+        #game-of-life-content{
+            flex-basis: 0;
+            display: block;
+        }
+    </style>
+    <title>Conway's Game of Life</title>
+</head>
+<body>
+    <div class="card properties">
+        <div class="card-body">
+            <div class="form-outline">
+                <!-- 4:3 ratio default-->
+                <label for="width-form">Width (default x)</label>
+                <input type="number" id="width-form" class="form-control form-control-sm" />
+            </div>
+            <div class="form-outline">
+                <label for="height-form">Height (default x)</label>
+                <input type="number" id="height-form" class="form-control form-control-sm" />
+            </div>
+            <button class="btn btn-secondary" id="size-change">Resize</button>
+            <button class="btn btn-primary" id="step">Step</button>
+            <button class="btn btn-primary" id="start">Run</button>
+            <div class="form-outline">
+                <label for="speed-form">speed</label>
+                <input type="number" id="speed-form" class="form-control form-control-sm" />
+            </div>
+        </div>
+    </div>
+    <div class="card" id="game-of-life-content">
+
+    </div>
+</body>
+<footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="conway.js">
+
+    </script>
+</footer>
+</html>
